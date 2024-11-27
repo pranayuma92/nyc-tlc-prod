@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 20px; line-height: 1.6;">
+
+    <header style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-size: 2em; color: #333;">API Documentation</h1>
+        <p style="color: #666;">Version 1.0 | Last Updated: November 2024</p>
+    </header>
+
+    <section style="margin-bottom: 30px;">
+        <h2 style="color: #007BFF;">Introduction</h2>
+        <p>This API allows you to access data related to <strong>Yellow Taxi Trip Data</strong>.</p>
+    </section>
+
+    <section style="margin-bottom: 30px;">
+        <h2 style="color: #007BFF;">Base URL</h2>
+        <p><code style="background-color: #f4f4f4; padding: 5px; border-radius: 4px;">https://your-domain.com/api/v1</code></p>
+    </section>
+
+    <section style="margin-bottom: 30px;">
+        <h2 style="color: #007BFF;">Endpoints</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 15px;">
+                <h3 style="margin-bottom: 5px;">POST /trip</h3>
+                <p>Returns a list of trips data</p>
+                <strong>Request payload example</strong>
+                <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 4px;">
+{
+    "dropOffTime: "2014-12-31",
+    "pickUpTime": "2014-12-31",
+    "fareAmount": "",
+    "distance": "",
+    "paymentType": "CRD",
+    "sort": "desc",
+    "limit": 25,
+    "offset": 0
+}
+                </pre>
+            </li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 30px;">
+        <h2 style="color: #007BFF;">Response Format</h2>
+        <p>All responses will be returned in JSON format:</p>
+        <pre style="background-color: #f4f4f4; padding: 10px; border-radius: 4px;">
+{
+    "statusCode": 200,
+    "message": "",
+    "data": [
+        {
+            "vendorId": "VTS",
+            "pickupDatetime": "2014-12-31T15:25:00.000",
+            "dropoffDatetime": "2014-12-31T15:28:00.000",
+            "passengerCount": 1,
+            "tripDistance": 0.53,
+            "pickupLongitude": -73.97957,
+            "pickupLatitude": 40.75498,
+            "storeAndFwdFlag": "",
+            "dropoffLongitude": -73.983734,
+            "dropoffLatitude": 40.749508,
+            "paymentType": "CRD",
+            "fareAmount": 4,
+            "mtaTax": 0.5,
+            "tipAmount": 1,
+            "tollsAmount": 0,
+            "totalAmount": 5.7,
+            "impSurcharge": 0,
+            "extra": "",
+            "rateCode": 1
+        },
+        {...}
+    ]
+}
+        </pre>
+    </section>
+
+    <footer style="text-align: center; margin-top: 40px; color: #aaa;">
+        <p>&copy; 2024 Example API. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
